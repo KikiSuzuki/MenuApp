@@ -1,0 +1,24 @@
+.main {
+  min-width: 100%;
+  display: flex;
+  flex: auto;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-image: url('../../images/1.jpeg');
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer {
+    position: static;
+  }
+}

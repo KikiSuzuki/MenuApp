@@ -1,0 +1,127 @@
+@import '~antd/dist/antd.css';
+html {margin: 0; padding: 0; height: 100%; min-height: 100%; }
+body, #root { height: 100%; min-height: 100%; background-color: #FAFBFB;
+    margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif;}
+
+* { border-collapse: collapse; border-color: transparent; }
+.bg-fa { background-color: #fafafa;}
+.b--e1 { border-color: #C9CED6;}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-4 {
+  gap: 4rem;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.h-fit {
+  height: fit-content;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.responsive-card .ant-card-body {
+  padding: 1.5rem;
+}
+
+.custom-notification .ant-message-notice-content {
+  margin-top: 3rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.5rem;
+  font-size: 18px;  
+}
+
+.custom-notification.custom-notification-info .ant-message-notice-content  {
+  box-shadow: 0 6px 12px -8px #188fff77, 0 12px 32px 0 #188fff49, 0 18px 56px 16px #188fff3f;
+}
+
+.custom-notification.custom-notification-error .ant-message-notice-content  {
+  box-shadow: 0 6px 12px -8px #ff4d4f77, 0 12px 32px 0 #ff4d4f49, 0 18px 56px 16px #ff4d4f3f;
+}
+
+.custom-notification.custom-notification-success .ant-message-notice-content  {
+  box-shadow: 0 6px 12px -8px #52c41a77, 0 12px 32px 0 #52c41a49, 0 18px 56px 16px #52c41a3f;
+}
+
+.custom-notification.ant-message-notice + .ant-message-notice .ant-message-notice-content {
+  margin-top: 0;
+}
+
+.custom-notification .ant-message-custom-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.custom-notification .anticon {
+  font-size: 1.5rem;
+}
+
+.instructionsImage {
+  width : 100%;
+  border: 1px solid #00000083;
+  margin-bottom: 1em
+}
+
+.instructionsTab {
+  margin-left: 2em;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 400px;
+  /* 16:9 */
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 608px;
+  max-height: 342px;
+}
+
+.highlighted-row {
+  background-color: #adc6ff;
+}
+
+.highlight-close-row {
+  background-color: #ff7875;
+}
+
+@media only screen and (max-width: 800px) {
+  .responsive-card .ant-card-body {
+    padding: 0.5rem;
+  }
+
+  .responsive-card .ant-card-head {
+    padding: 0.5rem;
+  }
+
+  .responsive-card.sm-p-0 .ant-card-body {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .no-col-margin-sm .ant-form-item {
+    margin-bottom: 0;
+  }
+
+  .sm-col-padding-bottom.ant-col {
+    padding-bottom: 1rem;
+  } 
+}

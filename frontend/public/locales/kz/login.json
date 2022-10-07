@@ -1,0 +1,15 @@
+{
+  "appName": "appName",
+  "signIn": "signIn",
+  "register": "register",
+  "resetPassword" :"resetPassword",
+  "email": "email",
+  "password": "password",
+  "firstname": "firstname",
+  "lastname": "lastname",
+  "save": "save",
+  "firstnameRequired": "firstnameRequired",
+  "lastnameRequired": "lastnameRequired",
+  "emailRequired": "emailRequired",
+  "passwordRequired": "passwordRequired"
+}

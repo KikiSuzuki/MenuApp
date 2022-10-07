@@ -1,0 +1,18 @@
+{
+  "lastname": "Тегі",
+  "firstname": "Аты",
+  "middlename": "Әкесінің аты",
+  "phone": "Телефон",
+  "save": "Сақтау",
+  "users": "users",
+  "newUser": "newUser",
+  "password": "password",
+  "appRole": "appRole",
+  "actions": "actions",
+  "delete": "delete",
+  "update": "update",
+  "editUser": "editUser",
+  "fio": "fio",
+  "login": "Логин",
+  "profile": "Профиль"
+}

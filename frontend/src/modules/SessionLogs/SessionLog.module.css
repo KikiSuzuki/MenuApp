@@ -1,0 +1,6 @@
+.grid {
+    display: grid;
+    height: 100%;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }

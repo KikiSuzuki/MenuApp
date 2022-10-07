@@ -1,0 +1,16 @@
+{
+  "appName": "Система онлайн-бронирования и заказа еды",
+  "signIn": "Вход в систему",
+  "register": "Регистрация",
+  "resetPassword": "Сброс пароля",
+  "sendEmail": "Отправить код на почту",
+  "email": "Электронная почта",
+  "password": "Пароль",
+  "firstname": "Имя",
+  "lastname": "Фамилия",
+  "save": "Сохранить",
+  "firstnameRequired": "введите имя",
+  "lastnameRequired": "введите фамилию",
+  "emailRequired": "введите эл. почту",
+  "passwordRequired": "введите пароль "
+}
