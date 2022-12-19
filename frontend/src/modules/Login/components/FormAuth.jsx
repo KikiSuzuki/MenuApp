@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
 import { Card, Select } from 'antd';
-import logo from '../../../logo.svg';
+import logo from '../../../logo.jpg';
 //  import { PasswordRecovery } from './PasswordRecovery';
 import { LoginForm } from './LoginForm';
 import { RegistrationForm } from './RegistrationForm';
@@ -20,7 +20,7 @@ export function FormAuth() {
 
   useEffect(() => {
     if (user) {
-      navigate('/users');
+      navigate('/desktop');
     }
   }, [user]);
 
@@ -39,7 +39,7 @@ export function FormAuth() {
   return (
     <div style={{ maxWidth: '550px', width: '100%' }}>
       <span className="db tc mb3">
-        <img src={logo} alt="Logo" width={86} height={86} />
+        <img src={logo} alt="Logo" width={100} height={100} />
       </span>
       <Card
         activeTabKey={tab}

@@ -7,7 +7,8 @@
   height: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-image: url('../../images/1.jpeg');
+  background-color: #111d2c;
+  /* background-image: url('../../images/1.jpeg'); */
 }
 
 .footer {

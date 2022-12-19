@@ -5,6 +5,7 @@ const { isAfter, addHours } = require('date-fns');
 require('dotenv').config();
 const { User, SessionLog, UserSession } = require('../schemas');
 const AppError = require('./appError');
+var xss = require('xss');
 
 const ACCESS_TOKEN_COOKIE = 'access';
 const REFRESH_TOKEN_COOKIE = 'refresh';
@@ -26,7 +27,7 @@ function getTokens(userId) {
 async function changePassword(req, res, next) {
   try {
     const { login, oldPassword, newPassword } = req.body;
-    const user = await User.findOne({ login }).exec();
+    const user = await User.findOne({ login:xss(login) }).exec();
     if (!user) {
       throw new AppError('user not found', 400);
     }
@@ -38,7 +39,7 @@ async function changePassword(req, res, next) {
       throw new AppError('cannot set the same password', 400);
     }
     const hash = await bcrypt.hash(newPassword, 12);
-    await User.updateOne({ login }, { password: hash, passwordExpired: false }).exec();
+    await User.updateOne({ login:xss(login) }, { password: hash, passwordExpired: false }).exec();
     res.json({ success: true });
   } catch (err) {
     next(err);
@@ -48,11 +49,11 @@ async function changePassword(req, res, next) {
 async function loginUser(req, res, next) {
   try {
     const { login, password } = req.body;
-    const user = await User.findOne({ login }).exec();
+    const user = await User.findOne({ login: xss(login) }).exec();
     if (!user) {
       throw new AppError('Invalid username or password', 400);
     }
-    const correctPassword = await user.comparePassword(password, { failureRedirect: '/login', failureMessage: true });
+    const correctPassword = await user.comparePassword(xss(password), { failureRedirect: '/login', failureMessage: true });
     if (!correctPassword) {
       throw new AppError('Invalid username or password', 400);
     }

@@ -21,17 +21,17 @@ const userSchema = new Schema(
       type: String,
       default: null,
       trim: true,
-      // validate: {
-      //   validator: validatePhone,
-      //   message: (props) => `${props.value} is not a valid phone`,
-      // },
+      validate: {
+        validator: validatePhone,
+        message: (props) => `${props.value} is not a valid phone`,
+      },
     },
     login: {
       type: String,
-      // validate: {
-      //   validator: validateEmail,
-      //   message: (props) => `${props.value} is not a valid email`,
-      // },
+      validate: {
+        validator: validateEmail,
+        message: (props) => `${props.value} is not a valid email`,
+      },
       required: true,
       trim: true,
       lowercase: true,

@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { showErrorMessage } from '../../shared/functions';
 import { api } from '../../util/axios.instance';
@@ -78,10 +77,10 @@ export const registrationUser = createAsyncThunk(
         `${process.env.REACT_APP_API_URL || ''}/registration`,
         formData,
       );
-      thunkApi.dispatch(userSlice.actions.setUser(response.data));
+      alert('success');
     } catch (err) {
       if (err?.response?.status === 401) {
-        showErrorMessage('Неправильное имя пользователя или пароль');
+        showErrorMessage('error');
       } else {
         showErrorMessage(err?.response?.data?.error || err.message);
       }

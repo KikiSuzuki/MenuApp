@@ -5,6 +5,7 @@ const authRouter = require('./auth.routes');
 const sessionLogsRouter = require('./sessionLogs.routes');
 const { authorizedOnly } = require('../lib/auth');
 const { adminAccess } = require('../lib/roleRestricted');
+const restaurantsRoutes = require('./restaurants.routes');
 
 const router = express.Router();
 
@@ -13,6 +14,10 @@ module.exports = () => {
     {
       router: userRouter,
       urlPath: '/user',
+    },
+    {
+      router: restaurantsRoutes,
+      urlPath: '/restaurants',
     },
     {
       router: userCreateRequestRouter,

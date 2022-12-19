@@ -1,7 +1,6 @@
 import React from 'react';
 import { CopyRight, Banner, FormAuth } from './components';
 import styles from './Login.module.css';
-import food from '../../images/1.jpeg';
 
 function Login() {
   return (

@@ -1,13 +1,14 @@
 const express = require('express');
 const { User } = require('../schemas');
 const { loginUser, logoutUser, refreshUserToken, changePassword } = require('../lib/auth');
-
+var xss = require('xss');
 const router = express.Router();
 
 module.exports = () => {
   router.post('/registration', async (req, res, next) => {
+    const {firstname, lastname, login, password} = req.body;
     try {
-      const user = await new User(req.body).save();
+      const user = await new User({firstname: xss(firstname), lastname: xss(lastname), login: xss(login), password:xss(password), appRole:'user'}).save();
       if (user) {
         res.json({
           firstname: user.firstname,

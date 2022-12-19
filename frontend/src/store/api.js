@@ -2,6 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { usersEndpoints } from './usersApi';
 import { authEndpoints } from './auth/auth.endpoints';
 import { sessionLogsEndpoints } from './sessionLogs';
+import { restaurantsEndpoints } from './restaurants';
 
 export const menuApi = createApi({
   reducerPath: 'menuApi',
@@ -12,11 +13,13 @@ export const menuApi = createApi({
     'users',
     'profile',
     'sessionLogs',
+    'restaurants',
   ],
   endpoints: (builder) => ({
     ...usersEndpoints(builder),
     ...authEndpoints(builder),
     ...sessionLogsEndpoints(builder),
+    ...restaurantsEndpoints(builder),
   }),
 });
 
@@ -33,4 +36,14 @@ export const {
    * Session logs
    */
   useGetSessionLogsQuery,
+    /**
+   * Restaurant
+   */
+  useGetRestaurantsQuery,
+  /**
+   * Hasd
+   */
+  usePostRestaurantsMutation,
+  usePostRestaurantsRateMutation,
+  // useDeleteRestaurantsMutation,
 } = menuApi;
